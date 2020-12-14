@@ -1,0 +1,65 @@
+::root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  font-size: 1.6rem;
+}
+
+.header {
+  margin: 2rem;
+  text-align: center;
+}
+
+.header h4 {
+  padding-top: 1rem;
+}
+
+.about {
+  padding: 1rem;
+  font-style: italic;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  margin: 1rem;
+}
+
+#tall,
+#grande,
+#venti {
+  height: 3rem;
+  width: 6rem;
+  margin: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: brown;
+  color: snow;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+
+#lorem-container {
+  display: block;
+  margin: 6rem auto;
+  width: 85vw;
+  height: 50vh;
+  min-height: 300px;
+  border: 1px solid black;
+  border-radius: 15px;
+  overflow: scroll;
+}
+
+#lorem-text {
+  padding: 1rem;
+}
