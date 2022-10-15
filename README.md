@@ -10,4 +10,4 @@ The cons of Lorem's latte:
 
 - Nothing
 
-Get your Lorem Latte here for free, donations are always welcome, minimum donation price is _€3.50_ (the price of an actual coffee).
+Get your Lorem Latte here for free, donations are always welcome ((click here))[https://www.paypal.com/donate/?hosted_button_id=4BLWQ8E3L8HWS], minimum donation price is _€3.50_ (the price of an actual coffee).
