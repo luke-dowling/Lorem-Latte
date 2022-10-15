@@ -9,25 +9,30 @@
   <body>
     <header class="header">
       <h1>Lorem's Latte</h1>
-      <h4>The only place to buy quality Lorem coffee at a resonable price</h4>
+      <img class="coffee-cup" src="img/coffee-cup (1).svg" alt="coffee cup" />
     </header>
 
-    <p class="about">
-      Jump in to the bold flavours of the worlds favourite placeholder coffee
-      text. Make yourself an Machi-ipsum to go, or sit down and relax into a
-      nice Flat Lorem. Whatever your taste, we have you covered.
-    </p>
+    <main class="container">
+      <h2 class="container-heading">Choose your coffee!</h2>
+      <section>
+        <div class="btn-container">
+          <button class="coffee-btn" id="tall">Tall</button>
 
-    <div class="btn-container">
-      <button id="tall">Tall</button>
-      <button id="grande">Grande</button>
-      <button id="venti">Venti</button>
-    </div>
+          <button class="coffee-btn" id="grande">Grande</button>
 
-    <div id="lorem-container">
-      <p id="lorem-text"></p>
-    </div>
+          <button class="coffee-btn" id="venti">Venti</button>
+        </div>
+      </section>
 
-    <script src="main.js"></script>
+      <section>
+        <div id="lorem-container">
+          <p id="lorem-text"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>@lukedowling 2022</footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>

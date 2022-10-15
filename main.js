@@ -10,7 +10,7 @@ const coffeeQuotesArr = [
   `Decaf coffee only works if you throw it at people.`,
 ];
 const coffeeTipsArr = [
-  `Buy whole bean coffee`,
+  `Buy whole bean coffee.`,
   `Store beans the proper way.`,
   `Re-use your coffee grounds.`,
   `Try Coffee Ice Cubes.`,
@@ -80,7 +80,7 @@ const venti = document.getElementById("venti");
 const loremText = document.getElementById("lorem-text");
 
 tall.addEventListener("click", () => {
-  let numOfSentences = Math.floor(Math.random() * 6 + 3);
+  let numOfSentences = Math.floor(Math.random() * 3 + 3);
   const output = [];
   for (let i = 0; i < numOfSentences; i++) {
     let num = Math.floor(Math.random() * 3);
@@ -106,7 +106,7 @@ tall.addEventListener("click", () => {
 });
 
 grande.addEventListener("click", () => {
-  let numOfSentences = Math.floor(Math.random() * 6 + 6);
+  let numOfSentences = Math.floor(Math.random() * 3 + 8);
   const output = [];
   for (let i = 0; i < numOfSentences; i++) {
     let num = Math.floor(Math.random() * 3);
@@ -132,7 +132,7 @@ grande.addEventListener("click", () => {
 });
 
 venti.addEventListener("click", () => {
-  let numOfSentences = Math.floor(Math.random() * 6 + 10);
+  let numOfSentences = Math.floor(Math.random() * 3 + 11);
   const output = [];
   for (let i = 0; i < numOfSentences; i++) {
     let num = Math.floor(Math.random() * 3);

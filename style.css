@@ -1,5 +1,7 @@
-::root {
+:root {
   font-size: 62.5%;
+  --tablet: 450px
+  --desktop: 900px;
 }
 
 * {
@@ -9,57 +11,113 @@
 }
 
 body {
-  font-family: monospace;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
+  color: rgb(237, 226, 226);
+  background-color: #65350f;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: 100px 1fr 50px;
 }
+
+/* HEADER */
 
 .header {
-  margin: 2rem;
+  background-color: #7e481c;
+  color: snow;
   text-align: center;
+  padding-block: 1em;
 }
 
-.header h4 {
-  padding-top: 1rem;
+.header h1 {
+ font-size: 2.4rem;
+ margin-bottom: 0.2em;
 }
 
-.about {
-  padding: 1rem;
-  font-style: italic;
+.header .coffee-cup {
+  background-color: snow;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 6px #030303;
+  padding: 10px;
+}
+
+/* Main */
+.container {
+  background-color: #1f1609;
+  border-radius: 10px;
+  text-align: center;
+
+  margin: 1em;
+  border-radius: 12px;
+}
+
+.container-heading {
+  margin: 1.5em 0 0.5em;
 }
 
 .btn-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 2rem;
-  margin: 1rem;
+  align-items: center;
+  margin-top: .5em;
 }
 
-#tall,
-#grande,
-#venti {
+.coffee-btn {
+  margin: .3em;
   height: 3rem;
-  width: 6rem;
-  margin: 2rem;
+  width: 10rem;
   cursor: pointer;
-  font-size: 1rem;
-  background-color: brown;
+  font-size: 1.6rem;
+
+  background-color: inherit;
   color: snow;
-  border: none;
-  border-radius: 15px;
+
+  border: 1px groove snow;
+  border-radius: 18px;
   outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.coffee-btn:hover {
+  background-color: snow;
+  color: #030303;
 }
 
 #lorem-container {
-  display: block;
-  margin: 6rem auto;
-  width: 85vw;
-  height: 50vh;
-  min-height: 300px;
-  border: 1px solid black;
-  border-radius: 15px;
-  overflow: scroll;
+  height: 400px;
+  width: 75vw;
+  margin: 1.5em auto;
+  text-align: center;
+
+  border: 2px solid snow;
+  border-top: none;
+  border-radius: 0 0 25% 25%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #lorem-text {
-  padding: 1rem;
+  padding: 0 1em;
+  font-size: 1.3rem;
+  padding-bottom: 4rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #7e481c;
+  color: snow;
+  font-size: 1.8rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
