@@ -1,6 +1,5 @@
 :root {
   font-size: 62.5%;
-  --tablet: 450px
   --desktop: 900px;
 }
 
@@ -13,7 +12,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
-  color: rgb(237, 226, 226);
+  color: snow;
   background-color: #65350f;
   min-height: 100vh;
 
@@ -25,14 +24,13 @@ body {
 
 .header {
   background-color: #7e481c;
-  color: snow;
   text-align: center;
   padding-block: 1em;
 }
 
 .header h1 {
- font-size: 2.4rem;
- margin-bottom: 0.2em;
+  font-size: 2.4rem;
+  margin-bottom: 0.2em;
 }
 
 .header .coffee-cup {
@@ -49,7 +47,10 @@ body {
   border-radius: 10px;
   text-align: center;
 
-  margin: 1em;
+  margin: 1em auto;
+  padding: 1em;
+  max-width: 350px;
+  width: 100%;
   border-radius: 12px;
 }
 
@@ -62,11 +63,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 
 .coffee-btn {
-  margin: .3em;
+  margin-block: 0.3em;
   height: 3rem;
   width: 10rem;
   cursor: pointer;
@@ -86,12 +87,12 @@ body {
 
 .coffee-btn:hover {
   background-color: snow;
-  color: #030303;
+  color: #1f1609;
 }
 
 #lorem-container {
-  height: 400px;
-  width: 75vw;
+  height: 390px;
+  width: 90%;
   margin: 1.5em auto;
   text-align: center;
 
@@ -113,11 +114,55 @@ body {
 /* FOOTER */
 footer {
   background-color: #7e481c;
-  color: snow;
   font-size: 1.8rem;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+footer a {
+  text-decoration: none;
+  padding: 0 0.5em;
+  color: snow;
+}
+
+footer a:hover {
+  color: #1f1609;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    grid-template-rows: 130px 1fr 60px;
+  }
+
+  .header h1 {
+    font-size: 3.2rem;
+  }
+
+  .header .coffee-cup {
+    height: 50px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    max-height: 550px;
+  }
+
+  #lorem-container {
+    height: 450px;
+    margin-top: 3em;
+  }
+
+  #lorem-text {
+    font-size: 1.6rem;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 2.2rem;
+  }
 }
