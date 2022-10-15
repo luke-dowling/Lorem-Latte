@@ -16,6 +16,8 @@ const coffeeTipsArr = [
   `Try Coffee Ice Cubes.`,
   `No fancy coffee machine, no problem.`,
   `Blast beans in a blender.`,
+  `Use the right amount of coffee.`,
+  `Experiment with your coffee.`,
 ];
 const coffeeRandomFacts = [
   `Coffee beans are technically seeds.`,
@@ -27,14 +29,16 @@ const coffeeRandomFacts = [
   `Finland is home to the biggest coffee lovers.`,
   `Coffee drinkers tend to live longer.`,
   `The Boston Tea Party helped popularize coffee in America.`,
+  `In France "Lorem Ipsum" is pronounced "Lorem Ipsum".`,
+  `Coffee mixed with wine is not a good idea.`,
+  `Hawaii is the only American state that grows coffee.`,
 ];
 
 const addLoremIpsum = (arr) => {
   const output = [];
-  arr.map((str) => {
+  arr.forEach((str) => {
     const subOutput = [];
-    const strArr = str.split(" ");
-    strArr.map((str) => {
+    str.split(" ").forEach((str) => {
       if (str === "coffee") {
         str = "lorem coffee";
       } else if (str === "coffee,") {
@@ -66,7 +70,6 @@ const addLoremIpsum = (arr) => {
     });
     output.push(subOutput.join(" "));
   });
-  //  console.log(output);
   return output;
 };
 
@@ -79,8 +82,9 @@ const grande = document.getElementById("grande");
 const venti = document.getElementById("venti");
 const loremText = document.getElementById("lorem-text");
 
-tall.addEventListener("click", () => {
-  let numOfSentences = Math.floor(Math.random() * 3 + 3);
+function generateLoremText(num) {
+  let numOfSentences = Math.floor(Math.random() * 3 + num);
+
   const output = [];
   for (let i = 0; i < numOfSentences; i++) {
     let num = Math.floor(Math.random() * 3);
@@ -100,59 +104,19 @@ tall.addEventListener("click", () => {
         ]
       );
     }
+
+    loremText.textContent = output.join(" ");
   }
-  console.log(output);
-  loremText.textContent = output.join(" ");
+}
+
+tall.addEventListener("click", () => {
+  generateLoremText(3);
 });
 
 grande.addEventListener("click", () => {
-  let numOfSentences = Math.floor(Math.random() * 3 + 8);
-  const output = [];
-  for (let i = 0; i < numOfSentences; i++) {
-    let num = Math.floor(Math.random() * 3);
-
-    if (num === 0) {
-      output.push(
-        loremCoffeeQuotesArr[Math.floor(Math.random() * coffeeQuotesArr.length)]
-      );
-    } else if (num === 1) {
-      output.push(
-        loremCoffeeTipsArr[Math.floor(Math.random() * coffeeTipsArr.length)]
-      );
-    } else if (num === 2) {
-      output.push(
-        loremCoffeeRandomFacts[
-          Math.floor(Math.random() * coffeeRandomFacts.length)
-        ]
-      );
-    }
-  }
-  console.log(output);
-  loremText.textContent = output.join(" ");
+  generateLoremText(7);
 });
 
 venti.addEventListener("click", () => {
-  let numOfSentences = Math.floor(Math.random() * 3 + 11);
-  const output = [];
-  for (let i = 0; i < numOfSentences; i++) {
-    let num = Math.floor(Math.random() * 3);
-
-    if (num === 0) {
-      output.push(
-        loremCoffeeQuotesArr[Math.floor(Math.random() * coffeeQuotesArr.length)]
-      );
-    } else if (num === 1) {
-      output.push(
-        loremCoffeeTipsArr[Math.floor(Math.random() * coffeeTipsArr.length)]
-      );
-    } else if (num === 2) {
-      output.push(
-        loremCoffeeRandomFacts[
-          Math.floor(Math.random() * coffeeRandomFacts.length)
-        ]
-      );
-    }
-  }
-  console.log(output);
-  loremText.textContent = output.join(" ");
+  generateLoremText(11);
 });
