@@ -1,6 +1,6 @@
 # Lorem-Latte
 
-The finest Lorem coffee online. The _Machi-ipsum_ give great tips and tricks while placeholding all your text. Made from specific ipsum beans, found on web servers around the world. Jump in to **bold** flavours of placeholder text,
+The finest Lorem based ground coffee online. The _Machi-ipsum_ give great tips and tricks while placeholding all your text. Made from specific ipsum beans, found on web servers around the world. Jump in to **bold** flavours of placeholder text.
 
 The benifits of Lorem's latte:
 
